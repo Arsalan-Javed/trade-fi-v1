@@ -1,0 +1,101 @@
+$border: 1px solid #f9f9f9;
+
+$height: 82px;
+$width: 137px;
+
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flexCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.nav.container {
+  @include flexRow();
+  justify-content: center;
+  border-radius: 0;
+  border: none;
+  overflow: hidden;
+  margin-top: 31px;
+
+  .item {
+    overflow: hidden;
+    @include flexCol();
+    height: $height;
+    width: $width ;
+    background-color: rgb(245, 246, 248);
+
+    &.selected {
+      background: linear-gradient(180deg, rgba(7, 125, 233, 0.5) 0%, rgba(2, 206, 240, 0.5) 100%);
+      .container {
+        width: calc(100% - 6px);
+        height: calc(100% - 6px);
+      }
+    }
+
+    border: $border;
+    position: relative;
+
+    &:not(:first-child){
+      border-left: none;
+    }
+
+    &:first-child {
+      border-left: $border;
+      border-top: $border;
+      border-bottom: $border;
+      border-top-left-radius: 40px;
+      border-bottom-left-radius: 40px;
+      border-right: none;
+      // width: 88px;
+
+      .container {
+        border-top-left-radius: 37px;
+        border-bottom-left-radius: 37px;
+        width: calc(100% - 6px);
+        height: calc(100% - 6px);
+      }
+    }
+    &:last-child {
+      border-top-right-radius: 40px;
+      border-bottom-right-radius: 40px;
+      // width: 88px;
+
+      .container {
+        border-top-right-radius: 37px;
+        border-bottom-right-radius: 37px;
+        width: calc(100% - 6px);
+        height: calc(100% - 6px);
+      }
+    }
+
+    .container {
+      @include flexCol();
+      $b: 1px;
+      background-color: rgb(245, 246, 248);
+
+
+
+      .menu-icon {
+        // color: red;
+      }
+
+      .title {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 14px;
+        color: #6b7a99;
+        text-align: center;
+        width: 80%;
+      }
+    }
+  }
+}

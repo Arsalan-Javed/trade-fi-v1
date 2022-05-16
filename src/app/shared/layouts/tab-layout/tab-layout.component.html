@@ -1,0 +1,9 @@
+<div class="nav container">
+  <div class="item" [ngClass]="{ selected: item.selected }" (click)="action(item)" *ngFor="let item of items">
+    <div class="container">
+      <img class="menu-icon" src="/assets/menu/{{item?.icon}}.svg">
+      <div class="title">{{item?.translationKey | translate }}</div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

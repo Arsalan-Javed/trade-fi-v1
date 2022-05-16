@@ -1,0 +1,33 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    mode="side" opened="true">
+    <!-- [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false"> -->
+    <mat-toolbar>
+      <!-- <img  class="big-logo" [@showLogo]="onSideNavChange ? 'show': 'hide'" src="/assets/img/Nexity-Network-small.svg"> -->
+      <!-- src="/assets/img/Nexity-Network-main.svg">  [@showLogo]="onSideNavChange ? 'hide': 'show'"-->
+      <img  class="small-logo"  src="/assets/img/Nexity-Network-small.svg">
+    </mat-toolbar>
+    <app-left-menu></app-left-menu>
+    <!-- <app-user-menu></app-user-menu> -->
+    <!-- <div class="sidenav_container" (mouseenter)="onSinenavToggle()" (mouseleave)="onSinenavToggle()"
+      [@onSideNavChange]="sideNavState ? 'open' : 'close'">
+    
+      <mat-nav-list>
+        <app-user-menu></app-user-menu>
+      </mat-nav-list>
+    </div> -->
+  </mat-sidenav>
+  <mat-sidenav-content [@onMainContentChange]="onSideNavChange ? 'open': 'close'">
+    <mat-toolbar>
+      <!-- <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button> -->
+      <span class="spacer"></span>
+      <app-header></app-header>
+      <!-- <span>nexity-web</span> -->
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

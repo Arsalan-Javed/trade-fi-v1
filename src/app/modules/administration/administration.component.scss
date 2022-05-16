@@ -1,0 +1,116 @@
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+@mixin flexCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.grid-container {
+  @include flexCol();
+
+  .tile-container {
+    .mat-h1 {
+      width: 100%;
+      text-align: left;
+      padding: 20px 0px 20px 0px;
+
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 29px;
+      color: #2e2e3a;
+    }
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 14px 20px;
+    width: 80%;
+
+    .tile {
+      width: 456px;
+      height: 274px;
+      background: linear-gradient(90deg, white 0%, #e3e2e2 50%, white 100%);
+      box-shadow: 0px 4px 12px 0px rgba(227, 227, 227, 1);
+
+      border-radius: 14px;
+      overflow: hidden;
+
+      @include flexCol();
+      .container {
+        @include flexCol();
+
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
+        background-color: white;
+        border-radius: 14px;
+        overflow: hidden;
+        position: relative;
+
+
+        .icon-container {
+          @include flexCol();
+          width: 87px;
+          height: 87px;
+          background: linear-gradient(180deg, #077de9 0%, #13b7d5 100%);
+          border-radius: 100%;
+          margin: 50px 0 15px 0;
+
+          img {
+            width: 43px;
+            height: 43px;
+          }
+        }
+        .title {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 900;
+          font-size: 20px;
+          line-height: 23px;
+          text-align: center;
+          color: #13b7d5;
+          margin-bottom: 17px;
+        }
+        .description {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 12px;
+          line-height: 14px;
+          text-align: center;
+          color: #6b7a99;
+        }
+
+        .soon {
+          position: absolute;
+          top: 0;
+          right: 0;
+          color: white;
+          background-color: #01bd9c;
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 900;
+          font-size: 10px;
+          line-height: 12px;
+
+          width: 101px;
+          height: 30px;
+          line-height: 30px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+
+}

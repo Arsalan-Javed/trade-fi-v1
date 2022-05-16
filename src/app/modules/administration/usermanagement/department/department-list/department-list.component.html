@@ -1,0 +1,29 @@
+<div class="forms-view-container">
+  <div class="forms">
+    <div class="flex-header">
+      <h3> {{'Administration.Department.Title' | translate}}</h3>
+      <div class="buttons">
+        <button class="btn btn-blue btn-fill btn-wd" (click)="addForm()">
+          {{'Department.Add' | translate}}
+          <div class="ripple-container"></div>
+        </button>
+        <button class="btn btn-red-gradient btn-fill btn-wd"
+                [disabled]="!departmentRef"
+                (click)="deleteSelectedDepartment()">
+          {{'General.Remove' | translate}}
+          <div class="ripple-container"></div>
+        </button>
+      </div>
+    </div>
+    <app-generic-table #departmentList
+                       [modelType]="departmentRef"
+                       [editLink]="'/administration/department/edit/'"
+                       [defaultSort]="'code'"
+                       [baseService]="departmentService"
+                       [deletePropertyName]="'name'"
+                       [editOnDblClick]="true" [popupEdit]="true" (editModel)="editModel($event)">
+    </app-generic-table>
+  </div>
+</div>
+
+<!-- [deleteDisableRule]="disableDeleteRule()"  -->

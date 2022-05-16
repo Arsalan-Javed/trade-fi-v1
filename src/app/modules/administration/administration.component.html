@@ -1,0 +1,15 @@
+<div class="grid-container">
+  <div class="tile-container">
+    <h1 class="mat-h1">Admin Dashboard</h1>
+    <div class="tile" *ngFor="let item of items" (click)="action(item)">
+      <div class="container">
+        <div class="soon" *ngIf="item.link === undefined" >{{"Coming Soon" | translate }}</div>
+        <div class="icon-container">
+          <img class="menu-icon" src="/assets/administration/{{item?.icon}}.svg">
+        </div>
+        <div class="title">{{item?.translationKey | translate }}</div>
+        <div class="description">{{item?.description | translate }}</div>
+      </div>
+    </div>
+  </div>
+</div>

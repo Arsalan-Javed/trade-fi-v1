@@ -1,0 +1,55 @@
+@import 'variables';
+@import 'nexity-theme';
+
+.department-dialog-content {
+  display: contents !important;
+
+  .department-form {
+    display: block !important;
+
+    .label {
+      display: block;
+      font-size: $font-size-base;
+      font-weight: $font-weight-bold;
+    }
+
+    .mat-form-field-appearance-outline .mat-form-field-outline-thick {
+      color: $nexity-dark-grey;
+    }
+
+    input.mat-input-element {
+      color: $nexity-very-dark-grey;
+    }
+
+    .is-active-button {
+      direction: rtl;
+
+      .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-content {
+        font-family: $font-family-base;
+        font-size: $font-size-base;
+        font-weight: $font-weight-bold;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+.action-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+::ng-deep {
+  .mat-slide-toggle .mat-slide-toggle-content {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+    margin-right: 20px;
+  }
+
+  .mat-form-field-appearance-outline .mat-form-field-subscript-wrapper {
+    padding-left: 0 !important;
+  }
+}
+

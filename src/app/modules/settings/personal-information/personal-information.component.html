@@ -1,0 +1,100 @@
+<div class="page-header">
+    <h1 class="title">Personal Information</h1>
+</div>
+<div class="page-container">
+    <form class="flex">
+        <div class="row">
+            <mat-label class="label">First Name</mat-label>
+            <mat-form-field appearance="outline" fxFlex fxFill>
+                <input class="input" value="Toma" matInput>
+            </mat-form-field>
+
+            <mat-label class="label">Last Name</mat-label>
+            <mat-form-field appearance="outline" fxFlex fxFill>
+                <input class="input" value="Corbu" matInput>
+            </mat-form-field>
+
+            <mat-label class="label">Email</mat-label>
+            <mat-form-field appearance="outline" fxFlex fxFill>
+                <input class="input" value="tomac@rosoftlab.net" matInput>
+            </mat-form-field>
+            <div class="flat-txt mt-16">Email is activated <span class="blb">Change</span></div>
+        </div>
+        <div class="row row1">
+            <div class="img-container" (click)="SelectImage()">
+                <img [src]="profileImg" />
+                <input id="btnImg" type="file" style="display: none;">
+            </div>
+        </div>
+    </form>
+
+</div>
+
+<div class="page-container mt25">
+    <form class="flex">
+        <div class="row">
+            <mat-label class="label">Password</mat-label>
+            <div class="dimtxt"> Set a unique password to protect your personal account. </div>
+            <div class="flat-txt"><span class="blb">Change Password</span></div>
+
+            <div class="mt35">
+                <mat-label class="label">Notifications</mat-label>
+                <mat-slide-toggle checked="true" class="is-active-button toggle-md float-right"></mat-slide-toggle>
+                <div class="dimtxt">Send me an email when: </div>
+            </div>
+
+            <div class="mt35">
+                <mat-label class="title-lbl">Any messages or notifications for documents and orders sent by me
+                </mat-label>
+                <mat-slide-toggle checked="true" class="is-active-button toggle-sm float-right"></mat-slide-toggle>
+
+                <div class="divider"></div>
+
+                <mat-label class="title-lbl">Document delivery failed</mat-label>
+                <mat-slide-toggle checked="true" class="is-active-button toggle-sm float-right"></mat-slide-toggle>
+
+                <div class="divider"></div>
+
+                <mat-label class="title-lbl">Transaction failed</mat-label>
+                <mat-slide-toggle checked="true" class="is-active-button toggle-sm float-right"></mat-slide-toggle>
+
+                <div class="divider"></div>
+
+                <mat-label class="title-lbl">Contract is signed by a recipient</mat-label>
+                <mat-slide-toggle checked="true" class="is-active-button toggle-sm float-right"></mat-slide-toggle>
+
+                <div class="divider"></div>
+
+                <mat-label class="title-lbl">Purchase order status is changed</mat-label>
+                <mat-slide-toggle checked="true" class="is-active-button toggle-sm float-right"></mat-slide-toggle>
+
+                <div class="divider"></div>
+
+                <mat-label class="title-lbl">Any messages or notifications for documents sent on my behalf</mat-label>
+                <mat-slide-toggle checked="true" class="is-active-button toggle-sm float-right"></mat-slide-toggle>
+
+            </div>
+
+        </div>
+        <div class="row row1">
+            <mat-label class="label">Timezone</mat-label>
+            <mat-form-field appearance="outline" fxFlex fxFill>
+                <input class="input" value="GMT+2, Europe, Bucharest" matInput>
+            </mat-form-field>
+
+            <mat-label class="label">Date Format</mat-label>
+            <mat-form-field appearance="outline" fxFlex fxFill>
+                <input class="input" value="MM-DD-YYYY" matInput>
+            </mat-form-field>
+
+            <mat-label class="label">Local Currency</mat-label>
+            <mat-form-field appearance="outline" fxFlex fxFill>
+                <input class="input" value="Romanian Leu" matInput>
+            </mat-form-field>
+        </div>
+    </form>
+</div>
+
+<div class="page-footer">
+    <button class="btn btn-green">Save</button>
+</div>

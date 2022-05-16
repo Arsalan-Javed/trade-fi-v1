@@ -1,0 +1,13 @@
+<div class="sidenav_container" (mouseenter)="onSinenavToggle()" (mouseleave)="onSinenavToggle()"
+  [@onSideNavChange]="sideNavState ? 'open' : 'close'">
+  <div fxLayout="column" fxLayoutGap="30px" style="height: 100%;">
+    <mat-nav-list fxLayout="column" fxLayoutAlign="space-between center" *ngIf="menuLoaded">
+      <a mat-list-item class="menu-item" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active-link" *ngFor="let page of pages" routerLink="{{ page.link }}">
+        <!-- <mat-icon class="material-icons-outlined" style="padding-right:5px;">{{page?.icon}}</mat-icon> -->
+        <img *ngIf="page?.icon !== undefined" class="menu-icon" src="/assets/menu/{{page?.icon}}.svg">
+        <span class="menu-text" [@showLogo]="linkText ? 'show' : 'hide'">{{ page?.translationKey | translate }} </span>
+        <div class="active-marker"></div>
+      </a>
+    </mat-nav-list>
+  </div>
+</div>

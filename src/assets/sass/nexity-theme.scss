@@ -1,0 +1,288 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material'as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+@import '_variables';
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+// nexity palette
+
+$mat-nexity-palette: (50: #e7f6fc, 100: #c4e9f9, 200: #9cdbf5, 300: #74cdf0, 400: #57c2ed, 500: #1d99de, 600: #33b0e7, 700: #2ca7e4, 800: #249fe1, 900: #1790db, A100: #ffffff, A200: #daf0ff, A400: #a7dbff, A700: #8dd0ff, contrast: (50: #000000, 100: #000000, 200: #000000, 300: #000000, 400: #000000, 500: #ffffff, 600: #ffffff, 700: #ffffff, 800: #ffffff, 900: #ffffff, A100: #000000, A200: #000000, A400: #000000, A700: #ffffff, ));
+// $nexity-web-primary: mat.define-palette(mat.$indigo-palette50: #8ff3f3,
+//     100: #78f1f1,
+//     200: #61eeee,
+//     300: #4aecec,
+//     400: #33e9e9,
+//     500: #1CE7E7,
+//     600: #16d3d3,
+//     700: #14bcbc,
+//     800: #11a5a5,
+//     900: #0f8e8e,
+//     A100: #a6f6f6,
+//     A200: #bdf8f8,
+//     A400: #d4fbfb,
+//     A700: #0d7777);
+
+
+// $nexity-primary: mat-palette($mat-nexity-palette);
+// $nexity-accent: mat-palette($mat-pink, A200, A100, A400);
+// // The warn palette is optional (defaults to red).
+// $nexity-warn: mat-palette($mat-red);
+// // Create the theme object (a Sass map containing all of the palettes).
+// $nexity-theme: mat-light-theme($nexity-primary, $nexity-accent, $nexity-warn);
+// // Include theme styles for core and each component used in your app.
+// // Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+
+$border-radius-base:10px;
+$nexity-web-primary: mat.define-palette(mat.$indigo-palette);
+$nexity-web-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$nexity-web-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$nexity-web-theme: mat.define-light-theme((color: (primary: $nexity-web-primary,
+      accent: $nexity-web-accent,
+      warn: $nexity-web-warn,
+    )));
+
+@include mat.all-component-themes($nexity-web-theme);
+// @function my-mat-light-theme-foreground($color) {
+//     @return (
+//         base:              $color,
+//         divider:           $black-12-opacity,
+//         dividers:          $black-12-opacity,
+//         disabled:          rgba($color, 0.38),
+//         disabled-button:   rgba($color, 0.38),
+//         disabled-text:     rgba($color, 0.38),
+//         hint-text:         rgba($color, 0.38),
+//         secondary-text:    rgba($color, 0.54),
+//         icon:              rgba($color, 0.54),
+//         icons:             rgba($color, 0.54),
+//         text:              rgba($color, 0.87),
+//         slider-off:        rgba($color, 0.26),
+//         slider-off-active: rgba($color, 0.38),
+//     );
+// };
+// // You can put any color here. I've chosen mat-color($my-app-primary, 700)
+// $my-foreground: my-mat-light-theme-foreground(mat-color(blue, 700));
+// $my-app-theme-custom: map-merge($nexity-theme, (foreground: $my-foreground));
+// // Include your custom theme.
+// @include angular-material-theme($my-app-theme-custom);
+// Other colors
+$nexity-white: #fafafa;
+$nexity-green: #8cc63f;
+$nexity-grey: #EBEDF2;
+$nexity-dark-grey: #909090;
+$nexity-very-dark-grey: #6a6a6a;
+$nexity-tab-bg: #e7e5e3;
+$nexity-disabled-font: rgba(0, 0, 0, .4);
+$nexity-blue: #1CE7E7;
+$nexity-red:red;
+
+// html elements size
+@mixin button {
+  width: 88px;
+  height: 36px;
+  color: $nexity-blue;
+}
+
+@mixin toolbar-secondary {
+  border-radius: 5px 5px 0 0;
+  margin-top: 16px;
+  height: 45px;
+}
+
+// mixin used only in edit survey component
+@mixin card {
+  width: 247px;
+  height: 99px;
+  background-color: $nexity-white;
+  margin-right: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  & .title p {
+    font-size: large;
+    color: $nexity-disabled-font;
+    margin-top: 0;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    button {
+      @include button;
+    }
+
+    p.underline {
+      border-width: 0 0 1px;
+      border-style: solid;
+      height: 23px;
+      border-color: $nexity-blue;
+    }
+  }
+}
+
+@mixin expansion-panel {
+  box-shadow: none;
+  margin: 5px 0;
+  background-color: white; //$nexity-tab-bg;
+}
+
+.standard-row {
+  display: flex;
+  align-items: center;
+  height: 130px;
+}
+
+.mat-tab-body-content {
+  overflow-y: hidden !important;
+}
+
+button {
+  text-transform: uppercase;
+}
+
+.mat-sort-header-button {
+  text-transform: initial !important;
+}
+
+.mat-mini-fab {
+  width: 24px;
+  height: 24px;
+
+  .mat-button-wrapper {
+    padding: 0 !important;
+    display: block !important; // TODO figure out how to position the wrapper correctly
+
+    i {
+      vertical-align: -1px;
+    }
+  }
+}
+
+.mat-fab {
+  width: 40px;
+  height: 40px;
+
+  .mat-button-wrapper {
+    padding: 8px !important;
+    display: block !important; // TODO figure out how to position the wrapper correctly
+    // i {
+    //   vertical-align: -1px;
+    // }
+  }
+}
+
+
+
+.forms-table {
+  height: 100%;
+}
+
+.application-area {
+  height: 100% // calc(100% - 61px);
+}
+
+.forms {
+  height: 90%;
+}
+
+.mat-table {
+  overflow-Y: auto;
+}
+
+// .mat-cell.mat-column-name {
+//   cursor: text;
+// }
+
+.mat-column-delete {
+  flex: 0 0 180px;
+}
+
+.mat-row.hovered {
+  background: #DEE8F4;
+}
+
+.mat-row.highlighted {
+  background: #EBEDF2;
+}
+
+.mat-elevation-z2 {
+  height: calc(100% - 61px);
+  box-shadow: none;
+
+}
+
+.split-area-forms {
+  overflow: hidden;
+}
+
+
+.mat-tab-group .action-buttons {
+  padding: 0;
+  margin: 0;
+}
+
+.mat-column-status {
+  text-transform: uppercase;
+
+  &.shared-status {
+    grid-template-rows: auto;
+  }
+}
+
+// .mat-column-name {
+//   text-transform: uppercase;
+
+//   &.shared-status {
+//     grid-template-rows: auto;
+//   }
+// }
+
+.svg-24px {
+  width: 24px;
+  height: 24px;
+}
+
+.check {
+  fill: blue;
+}
+
+// .mat-header-row {
+//   background-image: linear-gradient($brand-blue, $brand-blue2);
+// }
+.mat-header-cell {
+  color: black;
+  // text-transform: uppercase;
+  font-family: Roboto;
+  // font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 41px;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
+
+
+.mat-drawer-container {
+  background-color: white !important;
+}

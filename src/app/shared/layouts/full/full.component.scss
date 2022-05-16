@@ -1,0 +1,35 @@
+.sidenav-container {
+  height: 100%;
+}
+
+// .sidenav {
+//   width: 200px;
+// }
+
+.mat-toolbar {
+  background: transparent;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.mat-sidenav {
+  background: #EBEDF2;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.small-logo {
+  height: 49px !important;
+  width: 33px !important;
+}
+
+
+.big-logo {
+  height: 49px !important;
+  width: 33px !important;
+  // height: 39px !important;
+  // width: 122px !important;
+}

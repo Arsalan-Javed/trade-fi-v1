@@ -1,0 +1,32 @@
+<block-ui></block-ui>
+<h2 mat-dialog-title>{{'Administration.Department.Form.Title' | translate}}</h2>
+
+<mat-dialog-content class="mat-typography department-dialog-content">
+  <form class="department-form" [formGroup]="baseForm">
+    <mat-label class="label">{{'General.Code' | translate}}</mat-label>
+    <mat-form-field appearance="outline" fxFlex fxFill>
+      <input class="input" matInput formControlName="code" class="errorMessage">
+      <mat-error *ngIf="isFieldValid(baseForm, 'code')">
+        {{'General.Field.Required' | translate:getFiledName('General.Code')}}</mat-error>
+    </mat-form-field>
+
+    <mat-label  class="label">{{'General.Name' | translate}}</mat-label>
+    <mat-form-field appearance="outline" fxFlex fxFill>
+      <input class="input" matInput formControlName="name">
+      <mat-error *ngIf="isFieldValid(baseForm, 'name')" class="errorMessage">
+        {{'General.Field.Required' | translate:getFiledName('General.Name')}}</mat-error>
+    </mat-form-field>
+
+    <mat-slide-toggle class="is-active-button"
+                      name="isActive"
+                      formControlName="isActive">
+      {{'General.Active' | translate}}
+    </mat-slide-toggle>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions class="action-buttons">
+  <button class="btn btn-grey btn-fill" mat-dialog-close>{{'General.Cancel' | translate}}</button>
+  <button class="btn btn-green" cdkFocusInitial (click)="onSave()"
+          [disabled]="baseForm.invalid || !baseForm.dirty">{{'General.Save' | translate}}</button>
+</mat-dialog-actions>

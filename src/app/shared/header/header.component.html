@@ -1,0 +1,77 @@
+<m-web3-modal title="Connect" description="test" dismissText="askjd" promptMetamaskIfNotInstalled="true">
+</m-web3-modal>
+<mat-toolbar-row>
+  <div *ngIf="!connected" (click)="connect()" class="connect">
+    <img src="/assets/header/connect.svg" alt="connect">
+  </div>
+
+
+  <div class="connectedweb3accountContainer" *ngIf="connected">
+    <div class="connectedweb3account" [@flash]="isFlashed ? 'notflashed' : 'flashed' " (click)="clipboardAccount()">
+      <img src="/assets/header/metamaskfox.svg" alt="" class="fox">
+      <img src="/assets/header/greenDot.svg" alt="" class="greenDot">
+      <div class="account">{{ellipsis}}</div>
+    </div>
+
+    <div class="rinkeby">Rinkeby</div>
+  </div>
+
+  <div class="separator"></div>
+
+  <div class="notifications">
+    <img src="/assets/header/notification.svg" alt="">
+  </div>
+
+  <div class="separator"></div>
+
+  <div class="user-info" mat-button [matMenuTriggerFor]="menu" *ngIf="authService!.isAuthenticated">
+    <div class="greet">Welcome</div>
+    <div class="name">
+      {{ authService.name }}
+    </div>
+    <img class="menu-button-icon" src="/assets/header/chevron-down.svg" alt="">
+  </div>
+
+  <mat-menu class="user-menu" #menu="matMenu">
+    <div class="user-menu-item" mat-menu-item>
+      <img src="/assets/header/invite.svg" alt="invite" class="menu-item-image" >
+      <div class="label">Invite Member</div>
+    </div>
+    <div class="user-menu-item" mat-menu-item>
+      <img src="/assets/header/referral.svg" alt="referral" class="menu-item-image" >
+      <div class="label">Referral Program</div>
+    </div>
+    <div class="user-menu-item" mat-menu-item>
+      <img src="/assets/header/identification.svg" alt="identification" class="menu-item-image" >
+      <div class="label">Identification</div>
+    </div>
+    <div class="user-menu-item" mat-menu-item (click)="logout()">
+      <img src="/assets/header/logout.svg" alt="logout" class="menu-item-image" >
+      <div class="label">Sign Out</div>
+    </div>
+  </mat-menu>
+
+
+  <!--
+  <div class="language">
+    <button mat-button [matMenuTriggerFor]="menu1" *ngIf="languages">
+      <i class="material-icons">
+        language
+      </i>
+      Language
+      <i class="material-icons">
+        arrow_drop_down
+      </i>
+    </button>
+    <mat-menu #menu1="matMenu">
+      <ng-container *ngFor="let language of languages">
+        <button mat-menu-item (click)="changeLanguage(language)">
+          <img class="logo" src="assets/flags/{{language.flagImageFileName}}">
+          {{language.name}}
+        </button>
+      </ng-container>
+    </mat-menu>
+  </div> -->
+
+
+</mat-toolbar-row>

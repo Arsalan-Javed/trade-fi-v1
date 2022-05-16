@@ -1,0 +1,13 @@
+<form [formGroup]="parentForm">
+  <mat-form-field appearance="outline" fxFlex floatLabel="never">
+    <ngx-mat-file-input #removableInput formControlName="file" placeholder="{{placeholder}}" [accept]="accept">
+    </ngx-mat-file-input>
+    <mat-icon matSuffix *ngIf="removableInput.empty">folder</mat-icon>
+    <button mat-icon-button matSuffix *ngIf="allowDelete()" (click)="removableInput.clear($event)">
+      <mat-icon>clear</mat-icon>
+    </button>
+    <button mat-icon-button matSuffix *ngIf="!removableInput.empty" (click)="downloadFile($event)">
+      <mat-icon>cloud_download</mat-icon>
+    </button>
+  </mat-form-field>
+</form>

@@ -1,0 +1,15 @@
+<div class="tabs">
+    <div class="tab p-tab" [ngClass]="{'active': this.router.url == '/settings/personal-information'}">
+        <a [routerLink]="['/settings','personal-information']">
+            <img src="assets/img/user-icon.svg" />
+            <div>Personal Information</div>
+        </a>
+    </div>
+    <div class="tab o-tab" [ngClass]="{'active': router.url == '/settings/organization-information'}">
+        <a [routerLink]="['/settings' ,'organization-information']">
+            <img src="assets/img/org-icon.svg" />
+            <div>Organization Information</div>
+        </a>
+    </div>
+</div>
+<router-outlet></router-outlet>

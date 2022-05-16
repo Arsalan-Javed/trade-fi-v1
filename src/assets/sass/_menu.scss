@@ -1,0 +1,73 @@
+@import "../../zukunftskompetenzen-theme.scss";
+
+.menu {
+    display: inline-flex;
+    padding: 0 15px;
+    margin-left: 25px;
+}
+
+.menu-item {
+    height: 100%;
+    display: flex;
+    cursor: pointer;
+}
+
+.menu-item a {
+    margin: auto;
+    text-decoration: none;
+    color: black
+}
+
+.drop-down {
+    height: 100%;
+    //display: block;
+}
+
+.drop-down-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    z-index: 1;
+    top: 119px;
+    border: 1px solid $zukunftskompetenzen-tab-bg;
+    z-index: 1001;
+}
+
+.sub-link {
+    border: 1px solid $zukunftskompetenzen-tab-bg;
+    padding: 5px;
+    font-size: small;
+    z-index: 1001;
+}
+
+.sub-link>a {
+    display: block;
+}
+
+.drop-down:hover .drop-down-content {
+    display: block;
+}
+
+.menu-item:hover>a {
+    color: $mb-green;
+}
+
+.sub-link:hover>a {
+    color: $mb-green;
+}
+
+.active {
+    color: $mb-green;
+}
+
+.home-icon {
+    line-height: 32px;
+    font-weight: 500;
+
+}
+
+.menu-with-icon {
+    a {
+        height: 32px;
+    }
+}
