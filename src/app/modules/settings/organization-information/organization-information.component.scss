@@ -79,4 +79,23 @@ input {
     margin: 0px !important;
     background: url(/assets/img/arrow.svg);
     background-repeat: no-repeat;
+    margin-top: 10px !important;
+}
+
+::ng-deep .mat-form-field-infix {
+    padding-top: 6px !important;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-end {
+    border-radius: 10px !important;
+    border-left-style: solid !important;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-start,
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-end {
+    min-width: 0px !important;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-start {
+    display: none;
 }

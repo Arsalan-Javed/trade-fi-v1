@@ -162,5 +162,33 @@ input {
         margin-left: 20px;
         width: 226px;
         height: 238px;
+        border-radius: 12px;
     }
+}
+
+::ng-deep .mat-form-field-infix {
+    padding-top: 6px !important;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-end {
+    border-radius: 10px !important;
+    border-left-style: solid !important;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-start,
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-end {
+    min-width: 0px !important;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-start {
+    display: none;
+}
+
+::ng-deep .mat-slide-toggle-bar {
+    height: 20px !important;
+    border-radius: 10px !important;
+}
+
+::ng-deep .mat-slide-toggle-thumb-container {
+    margin-top: 3px;
 }
