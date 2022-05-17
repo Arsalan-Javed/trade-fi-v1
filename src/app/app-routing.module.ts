@@ -35,6 +35,11 @@ const routes: Routes = [
         data: { parentKey: 'Settings' }
       },
       {
+        path: 'screens',
+        loadChildren: () => import('./modules/screens/screens.module').then(m => m.ScreensModule),
+        data: { parentKey: 'Screens' }
+      },
+      {
         path: '**', component: PageNotFoundComponent
       },
       { path: 'notfound', component: PageNotFoundComponent },
