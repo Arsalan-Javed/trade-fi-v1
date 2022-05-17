@@ -7,25 +7,27 @@ import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 import { MaterialFileInputModule } from 'ngx-material-file-input';
 import { Webcryptoservice } from '../services/webcrypto.service';
 import { FileUploadComponent } from './file-upload/file-upload.component';
-import { MissingTranslationHandler, TranslateModule} from "@ngx-translate/core";
-import { MyMissingTranslationHandler} from "../handler/my-missing-translation-handler";
+import { MissingTranslationHandler, TranslateModule } from "@ngx-translate/core";
+import { MyMissingTranslationHandler } from "../handler/my-missing-translation-handler";
+import { CustomCheckboxComponent } from './components/custom-checkbox/custom-checkbox.component';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        FormsModule,
-        ReactiveFormsModule,
-        MaterialModule,
-        RslBaseModule,
-        FlexLayoutModule,
-        MaterialFileInputModule,
-        TranslateModule.forChild({
-          missingTranslationHandler: { provide: MissingTranslationHandler, useClass: MyMissingTranslationHandler },
-          useDefaultLang: false,
-        }),
-    ],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MaterialModule,
+    RslBaseModule,
+    FlexLayoutModule,
+    MaterialFileInputModule,
+    TranslateModule.forChild({
+      missingTranslationHandler: { provide: MissingTranslationHandler, useClass: MyMissingTranslationHandler },
+      useDefaultLang: false,
+    }),
+  ],
   declarations: [
     FileUploadComponent,
+    CustomCheckboxComponent,
   ],
   providers: [
     Webcryptoservice
@@ -40,6 +42,7 @@ import { MyMissingTranslationHandler} from "../handler/my-missing-translation-ha
     NgxMatSelectSearchModule,
     MaterialFileInputModule,
     FileUploadComponent,
+    CustomCheckboxComponent
   ]
 })
 export class SharedModule { }

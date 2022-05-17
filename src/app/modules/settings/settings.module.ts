@@ -1,5 +1,6 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 import { MissingTranslationHandler, TranslateModule } from "@ngx-translate/core";
 import { BlockUIModule } from "ng-block-ui";
 import { MyMissingTranslationHandler } from "src/app/handler/my-missing-translation-handler";
@@ -19,6 +20,7 @@ import { SettingsComponent } from "./settings.component";
         CommonModule,
         SettingsRoutingModule,
         SharedModule,
+        FormsModule,
         TranslateModule.forChild({
             missingTranslationHandler: { provide: MissingTranslationHandler, useClass: MyMissingTranslationHandler },
             useDefaultLang: false,
