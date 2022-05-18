@@ -63,10 +63,87 @@ input {
     color: #000000;
 }
 
+.page-header,
 .page-footer {
     margin: auto;
     width: 70%;
     padding: 40px 40px 40px 60px;
+}
+
+.file-container {
+    box-sizing: border-box;
+    width: 267px;
+    height: 275px;
+    border: 1px dashed #DDDFE4;
+    border-radius: 10px;
+    background-position: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .btnuploadfile {
+        width: 135px;
+        height: 40px;
+        background: #077DE9;
+        border-radius: 8px;
+        position: relative;
+        left: 20%;
+        cursor: pointer;
+
+        span {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            text-align: center;
+            color: #FFFFFF;
+            text-transform: none;
+        }
+    }
+
+    span {
+
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+        color: #6B7A99;
+
+    }
+}
+
+.points {
+    box-sizing: border-box;
+    width: 267px;
+    height: 214px;
+    background: #F6F7FD;
+    border: 1px dashed #6B7A99;
+    border-radius: 20px;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 25px;
+
+    h1 {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 215%;
+        color: #077DE9;
+    }
+
+    .items {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 25px;
+        color: #000000;
+    }
 }
 
 
