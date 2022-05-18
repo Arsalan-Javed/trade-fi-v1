@@ -1,1 +1,77 @@
-<p>welcome works!</p>
+<div class="page-container">
+    <div class="close">
+        <a class="a-close"></a>
+    </div>
+    <div class="center">
+        <mat-label class="label title">Welcome to Nexity</mat-label>
+        <div class="divider"></div>
+        <mat-label class="label">To get started, please enter your entity details below <br> and streamline your
+            experience.</mat-label>
+
+    </div>
+    <div class="content">
+        <div class="row">
+            <div class="field">
+                <span>Entity Name</span>
+            </div>
+            <div class="control">
+                <mat-form-field appearance="outline" fxFlex fxFill>
+                    <input class="input" value="Rosoftlab" matInput>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="field">
+                <span>Entity Type</span>
+            </div>
+            <div class="control">
+                <mat-form-field appearance="outline" fxFlex fxFill>
+                    <mat-select value="Private company">
+                        <mat-option value="Publicly traded company">Publicly traded company</mat-option>
+                        <mat-option value="Private company">Private company</mat-option>
+                        <mat-option value="Foundation">Foundation</mat-option>
+                        <mat-option value="Partnership">Partnership</mat-option>
+                        <mat-option value="Association or Consortium">Association or Consortium</mat-option>
+                        <mat-option value="Co-operative">Co-operative</mat-option>
+                        <mat-option value="Government Body">Government Body</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="field">
+                <span>Country</span>
+            </div>
+            <div class="control">
+                <mat-form-field appearance="outline" fxFlex fxFill>
+                    <mat-select value="From A to Z">
+                        <mat-option value="From A to Z">From A to Z</mat-option>
+                        <mat-option value="Romania">Romania</mat-option>
+                        <mat-option value="UK">UK</mat-option>
+                        <mat-option value="USA">USA</mat-option>
+                        <mat-option value="Canada">Canada</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="field">
+                <span>Industry</span>
+            </div>
+            <div class="control">
+                <mat-form-field appearance="outline" fxFlex fxFill>
+                    <mat-select value="From A to Z">
+                        <mat-option value="From A to Z">From A to Z</mat-option>
+                        <mat-option value="Romania">Software</mat-option>
+                        <mat-option value="UK">Healthcare</mat-option>
+                        <mat-option value="USA">Automobile</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+    </div>
+    <div class="mt20 pl28">
+        <button class="btn btn-green">Send</button>
+    </div>
+
+</div>

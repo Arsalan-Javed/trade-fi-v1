@@ -82,6 +82,15 @@ input {
     margin-top: 10px !important;
 }
 
+::ng-deep .mat-select-panel::-webkit-scrollbar {
+    width: 8px;
+}
+
+::ng-deep .mat-select-panel::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 6px;
+}
+
 ::ng-deep .mat-form-field-infix {
     padding-top: 6px !important;
 }
