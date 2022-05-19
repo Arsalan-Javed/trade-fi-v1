@@ -12,6 +12,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { RegisterStep1Component } from './register-step1/register-step1.component';
 import { RegisterStep2Component } from './register-step2/register-step2.component';
 import { RegisterStep3Component } from './register-step3/register-step3.component';
+import { FileUploadComponent } from './file-upload/file-upload.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { RegisterStep3Component } from './register-step3/register-step3.componen
         WelcomeComponent,
         RegisterStep1Component,
         RegisterStep2Component,
-        RegisterStep3Component
+        RegisterStep3Component,
+        FileUploadComponent
     ],
     imports: [
         CommonModule,
