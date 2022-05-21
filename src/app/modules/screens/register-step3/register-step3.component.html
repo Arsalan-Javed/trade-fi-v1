@@ -1,1 +1,100 @@
-<p>register-step3 works!</p>
+<div class="page-header">
+    <h1 class="title">Last step. Upload your documents.</h1>
+</div>
+<div class="page-container">
+    <h1 class="title">Where are your customers located?</h1>
+
+    <form class="flex mgtb">
+        <div class="row flex-col">
+            <app-custom-checkbox [checked]="true">
+                <span class="chk-label">USA</span>
+            </app-custom-checkbox>
+            <div class="divider"></div>
+            <app-custom-checkbox [checked]="true">
+                <span class="chk-label">Canada</span>
+            </app-custom-checkbox>
+
+        </div>
+
+        <div class="row flex-col">
+            <app-custom-checkbox [checked]="true">
+                <span class="chk-label">EU</span>
+            </app-custom-checkbox>
+            <div class="divider"></div>
+            <app-custom-checkbox [checked]="true">
+                <span class="chk-label">Africa</span>
+            </app-custom-checkbox>
+
+        </div>
+
+        <div class="row flex-col">
+            <app-custom-checkbox [checked]="true">
+                <span class="chk-label">Asia</span>
+            </app-custom-checkbox>
+            <div class="divider"></div>
+            <app-custom-checkbox [checked]="true">
+                <span class="chk-label">Australia</span>
+            </app-custom-checkbox>
+
+        </div>
+
+        <div class="row flex-col">
+            <app-custom-checkbox [checked]="true">
+                <span class="chk-label">Other Europe</span>
+            </app-custom-checkbox>
+            <div class="divider"></div>
+            <app-custom-checkbox [checked]="true">
+                <span class="chk-label">UK</span>
+            </app-custom-checkbox>
+
+        </div>
+
+
+    </form>
+
+    <div class="flex">
+        <div class="row">
+            <h1 class="title">Organizational documents</h1>
+            <div class="label">Please provide at least one of the following:</div>
+
+            <div class="divider"></div>
+
+            <div class="arti"> Articles of incorporation </div>
+
+            <div class="arti"> Articles of association </div>
+
+            <div class="arti"> Trust or Partnership agreement </div>
+
+            <div class="divider"></div>
+
+            <div class="mt58">
+                <app-browse-file [view]="'l'"></app-browse-file>
+            </div>
+
+        </div>
+
+        <div class="row row1">
+            <div class="label">Proof of physical business address</div>
+            <h1 class="sm">Please make sure that:</h1>
+
+            <div class="arti"> The document is in your entity’s name. </div>
+
+            <div class="arti"> The document is dated within 90 days.</div>
+
+            <div class="arti"> The address on the document matches your</div>
+
+            <div class="arti"> principal place of business.</div>
+
+            <div class="divider"></div>
+
+            <div>
+                <app-browse-file [view]="'l'"></app-browse-file>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<div class="page-footer">
+    <button class="btn btn-green">Next</button>
+</div>

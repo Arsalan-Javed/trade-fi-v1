@@ -2,13 +2,13 @@
     box-sizing: border-box;
     width: 267px;
     height: 275px;
-    border: 1px dashed #DDDFE4;
     border-radius: 10px;
     background-position: center;
-    margin: auto;
     display: flex;
+    margin: auto;
     flex-direction: column;
     justify-content: center;
+    border: 1px dashed #DDDFE4;
 
     .btnuploadfile {
         width: 135px;
@@ -41,6 +41,26 @@
         color: #6B7A99;
 
     }
+
+    .error {
+        color: #f00 !important;
+    }
+
+    .filename {
+        color: #85bff4 !important;
+    }
+}
+
+
+
+.droparea {
+    border: 1px dashed #61acf1 !important;
+    background-color: #ffffff !important;
+}
+
+
+.align-left {
+    margin: 0px !important;
 }
 
 .landscape {

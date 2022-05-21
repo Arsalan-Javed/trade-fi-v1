@@ -1,6 +1,10 @@
-<div class="file-container" [ngClass]="{ 'landscape' : view == 'l'}">
-    <button class="btn btnuploadfile">
+<div class="file-container"
+    [ngClass]="{ 'landscape' : view == 'l' , 'align-left' : view == 'l' , 'droparea' : isDrop }">
+    <button class="btn btnuploadfile" (click)="browseFile()">
         <span>Browse File</span>
     </button>
     <span>or drag your documents to start uploading</span>
+    <span class="error" *ngIf="error">Only one file at time allow</span>
+    <span class="filename" *ngIf="fileName">{{ fileName }}</span>
+    <input type="file" [id]="fileId" [multiple]="false" (change)="onFileChange($event)" style="display:none" />
 </div>
