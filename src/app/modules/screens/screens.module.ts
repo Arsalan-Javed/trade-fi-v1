@@ -14,6 +14,7 @@ import { RegisterStep2Component } from './register-step2/register-step2.componen
 import { RegisterStep3Component } from './register-step3/register-step3.component';
 import { FileUploadComponent } from './file-upload/file-upload.component';
 import { AddPartnerComponent } from './add-partner/add-partner.component';
+import { InviteSuccessComponent } from './invite-success/invite-success.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { AddPartnerComponent } from './add-partner/add-partner.component';
         RegisterStep2Component,
         RegisterStep3Component,
         FileUploadComponent,
-        AddPartnerComponent
+        AddPartnerComponent,
+        InviteSuccessComponent
     ],
     imports: [
         CommonModule,
