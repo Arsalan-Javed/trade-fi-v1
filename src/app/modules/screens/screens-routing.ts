@@ -5,6 +5,7 @@ import { CertificationsComponent } from './certifications/certifications.compone
 import { InviteSuccessComponent } from './invite-success/invite-success.component';
 import { KeepBusinessComponent } from './keep-business/keep-business.component';
 import { PartnerPopupComponent } from './partner-popup/partner-popup.component';
+import { ReferralComponent } from './referral/referral.component';
 import { RegisterStep1Component } from './register-step1/register-step1.component';
 import { RegisterStep2Component } from './register-step2/register-step2.component';
 import { RegisterStep3Component } from './register-step3/register-step3.component';
@@ -23,6 +24,7 @@ const routes: Routes = [
     { path: 'add-partner', component: AddPartnerComponent },
     { path: 'invite-success', component: InviteSuccessComponent },
     { path: 'partner-popup', component: PartnerPopupComponent },
+    { path: 'referral', component: ReferralComponent },
 
 ];
 

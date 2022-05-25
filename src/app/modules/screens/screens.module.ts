@@ -16,6 +16,7 @@ import { FileUploadComponent } from './file-upload/file-upload.component';
 import { AddPartnerComponent } from './add-partner/add-partner.component';
 import { InviteSuccessComponent } from './invite-success/invite-success.component';
 import { PartnerPopupComponent } from './partner-popup/partner-popup.component';
+import { ReferralComponent } from './referral/referral.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { PartnerPopupComponent } from './partner-popup/partner-popup.component';
         FileUploadComponent,
         AddPartnerComponent,
         InviteSuccessComponent,
-        PartnerPopupComponent
+        PartnerPopupComponent,
+        ReferralComponent
     ],
     imports: [
         CommonModule,
