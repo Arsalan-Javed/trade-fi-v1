@@ -10,6 +10,7 @@ import { FileUploadComponent } from './file-upload/file-upload.component';
 import { MissingTranslationHandler, TranslateModule } from "@ngx-translate/core";
 import { MyMissingTranslationHandler } from "../handler/my-missing-translation-handler";
 import { CustomCheckboxComponent } from './components/custom-checkbox/custom-checkbox.component';
+import { CustomRadioButtonComponent } from './components/custom-radio-button/custom-radio-button.component';
 
 @NgModule({
   imports: [
@@ -28,6 +29,7 @@ import { CustomCheckboxComponent } from './components/custom-checkbox/custom-che
   declarations: [
     FileUploadComponent,
     CustomCheckboxComponent,
+    CustomRadioButtonComponent,
   ],
   providers: [
     Webcryptoservice
@@ -42,7 +44,8 @@ import { CustomCheckboxComponent } from './components/custom-checkbox/custom-che
     NgxMatSelectSearchModule,
     MaterialFileInputModule,
     FileUploadComponent,
-    CustomCheckboxComponent
+    CustomCheckboxComponent,
+    CustomRadioButtonComponent
   ]
 })
 export class SharedModule { }

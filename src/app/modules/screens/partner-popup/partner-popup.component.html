@@ -1,0 +1,143 @@
+<div class="page-container">
+    <div class="close">
+        <a class="a-close"></a>
+    </div>
+
+    <div class="tabs">
+        <div (click)="selectedTab='invite'" class="tab p-tab" [ngClass]="{ 'active' : selectedTab == 'invite' }">
+            <a>
+                <div>Invite Partner</div>
+            </a>
+        </div>
+        <div (click)="selectedTab='import'" class="tab o-tab" [ngClass]="{ 'active' : selectedTab == 'import' }">
+            <a>
+                <div>Import Partners</div>
+            </a>
+        </div>
+    </div>
+
+    <ng-container *ngIf="selectedTab == 'invite'">
+        <div class="flex center">
+            <app-custom-radio-button class="flex" [items]="items" [(ngModel)]="selectedItem"></app-custom-radio-button>
+        </div>
+
+        <ng-container *ngIf="selectedItem=='email'">
+            <div class="content">
+                <div class="row">
+                    <div class="field">
+                        <span>Person of Contact</span>
+                    </div>
+                    <div class="control">
+                        <mat-form-field appearance="outline" fxFlex fxFill>
+                            <input class="input" value="Georg Schaeffler" matInput>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="field">
+                        <span>Email</span>
+                    </div>
+                    <div class="control">
+                        <mat-form-field appearance="outline" fxFlex fxFill>
+                            <input class="input" value="toma@schaeffler.com" matInput>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="field">
+                        <span>Company Name</span>
+                    </div>
+                    <div class="control">
+                        <mat-form-field appearance="outline" fxFlex fxFill>
+                            <input class="input" value="Schaeffler" matInput>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="field">
+                        <img src="assets/img/add-icon-sm.svg" /> <span class="hyperlink">Add another partner</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt20 pl28">
+                <button class="btn btn-grey btn-fill">Cancel</button>
+                <button class="btn btn-green">Add</button>
+            </div>
+        </ng-container>
+
+
+
+        <ng-container *ngIf="selectedItem=='phone'">
+            <div class="content">
+                <div class="row">
+                    <div class="field">
+                        <span>Person of Contact</span>
+                    </div>
+                    <div class="control">
+                        <mat-form-field appearance="outline" fxFlex fxFill>
+                            <input class="input" value="Georg Schaeffler" matInput>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row flex">
+                    <div class="row code">
+                        <div class="field">
+                            <span>Code</span>
+                        </div>
+                        <div class="control">
+                            <mat-form-field class="center" appearance="outline" fxFlex fxFill>
+                                <input class="input" value="+33" matInput>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row phone">
+                        <div class="field">
+                            <span>Phone Number</span>
+                        </div>
+                        <div class="control">
+                            <mat-form-field appearance="outline" fxFlex fxFill>
+                                <input class="input" value="430 996 255" matInput>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="field">
+                        <span>Company Name</span>
+                    </div>
+                    <div class="control">
+                        <mat-form-field appearance="outline" fxFlex fxFill>
+                            <input class="input" value="Schaeffler" matInput>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="field">
+                        <img src="assets/img/add-icon-sm.svg" /> <span class="hyperlink">Add another partner</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mt20 pl28">
+                <button class="btn btn-grey btn-fill">Cancel</button>
+                <button class="btn btn-green">Invite</button>
+            </div>
+        </ng-container>
+    </ng-container>
+
+    <ng-container *ngIf="selectedTab == 'import'">
+        <div class="content">
+            <app-browse-file [view]="'l'" [title]="'UPLOAD EXCEL FILE'"></app-browse-file>
+        </div>
+
+        <div class="mt30 pl28 center">
+            <button class="btn btn-grey btn-fill">Cancel</button>
+            <button class="btn btn-green">Import</button>
+        </div>
+
+    </ng-container>
+
+
+
+
+</div>

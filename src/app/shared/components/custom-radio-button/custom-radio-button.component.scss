@@ -1,0 +1,67 @@
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #6B7A99;
+    margin-right: 5px;
+    margin-left: 5px;
+
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    border: 2px solid #6B7A99;
+    margin-top: -3px;
+    margin-left: 8px;
+}
+
+.checkmark.active {
+    border: 2px solid #01BD9C;
+}
+
+
+
+.container input:checked~.checkmark {
+    border: 2px solid #01BD9C;
+    background: url('/assets/img/elips.svg');
+    background-repeat: no-repeat;
+    background-position-x: 3px;
+    background-position-y: 3px;
+}
+
+
+.container input:checked~.checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}

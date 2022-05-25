@@ -10,6 +10,7 @@ export class FileUploadComponent implements OnInit {
   constructor() { }
 
   @Input('view') view = 'p' // 'l'
+  @Input('title') title = 'Browse File'
 
   error: string;
   dragAreaClass: string;
