@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthGuard } from 'src/app/shared/authguard';
+import { AddPartnerComponent } from './add-partner/add-partner.component';
 import { CertificationsComponent } from './certifications/certifications.component';
 import { KeepBusinessComponent } from './keep-business/keep-business.component';
 import { RegisterStep1Component } from './register-step1/register-step1.component';
@@ -17,7 +17,9 @@ const routes: Routes = [
     { path: 'welcome', component: WelcomeComponent },
     { path: 'step1', component: RegisterStep1Component },
     { path: 'step2', component: RegisterStep2Component },
-    { path: 'step3', component: RegisterStep3Component }
+    { path: 'step3', component: RegisterStep3Component },
+    { path: 'add-partner', component: AddPartnerComponent },
+
 ];
 
 @NgModule({

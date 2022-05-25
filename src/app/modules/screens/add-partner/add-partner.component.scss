@@ -1,0 +1,147 @@
+.page-container {
+    margin: auto;
+    width: 30%;
+    padding: 30px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 45.88%, rgba(245, 246, 248, 0) 98.32%);
+    border-radius: 14px;
+    box-sizing: border-box;
+    border: 1px solid;
+    border-image-source: linear-gradient(90deg, #FFFFFF 1.51%, #C0C7DB 51.06%, #FFFFFF 100%);
+    box-shadow: 0px 4px 12px 0px #e3e3e3;
+    filter: drop-shadow(0px 4px 12px #E3E3E3);
+    top: 18%;
+    position: absolute;
+    left: 35%;
+
+    .label {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 100%;
+        color: #6B7A99;
+    }
+
+    .title {
+        font-size: 20px !important;
+    }
+
+    .flex {
+        display: flex;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .mt20 {
+        margin-top: 20px;
+    }
+
+    .close {
+        width: auto;
+        height: 25px;
+    }
+
+    .a-close {
+        background: url('/assets/img/close.svg');
+        background-repeat: no-repeat;
+        float: right;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    .divider {
+        clear: both;
+        height: 20px;
+    }
+
+    .content {
+        padding-left: 35px;
+        padding-right: 35px;
+        margin-top: 40px;
+
+        .row {
+
+            .field {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 16px;
+                color: #000000;
+                margin-bottom: 10px;
+            }
+
+            .control {}
+        }
+    }
+
+    .pl28 {
+        padding-left: 28px;
+    }
+
+    button {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        padding: 10px 30px;
+        letter-spacing: 1px;
+    }
+
+
+}
+
+::ng-deep .mat-form-field-infix {
+    padding-top: 6px !important;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-end {
+    border-radius: 10px !important;
+    border-left-style: solid !important;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-start,
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-end {
+    min-width: 0px !important;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-start {
+    display: none;
+}
+
+::ng-deep .mat-option-text,
+::ng-deep .mat-select-min-line,
+input {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 14px;
+    color: #000000;
+}
+
+::ng-deep .mat-select-arrow {
+    width: 18px !important;
+    height: 9px !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+    margin: 0px !important;
+    background: url(/assets/img/arrow.svg);
+    background-repeat: no-repeat;
+    margin-top: 10px !important;
+}
+
+::ng-deep .mat-select-panel::-webkit-scrollbar {
+    width: 8px;
+}
+
+::ng-deep .mat-select-panel::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 6px;
+}
