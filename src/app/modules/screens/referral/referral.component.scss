@@ -51,8 +51,7 @@
     }
 
     .detail {
-        padding-top: 10px !important;
-        padding-bottom: 10px !important;
+        padding-top: 15px !important;
     }
 
     .box-sm {
@@ -152,4 +151,28 @@
 .divider-vs {
     clear: both;
     width: 10px;
+}
+
+button {
+    text-transform: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.links {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 19px;
+    color: #077DE9;
+    padding-left: 10px;
+    padding-top: 10px;
+
+    div {
+        width: 99%;
+    }
 }
