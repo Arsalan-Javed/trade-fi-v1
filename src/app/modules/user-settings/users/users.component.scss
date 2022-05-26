@@ -1,16 +1,35 @@
 .page-container {
     margin: auto;
-    width: 70%;
+    width: 80%;
     padding: 40px 40px 40px 60px;
-    border-radius: 10px;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 45.88%, rgba(245, 246, 248, 0) 98.32%);
-    border-radius: 14px;
-    box-sizing: border-box;
-    border: 1px solid;
-    border-image-source: linear-gradient(90deg, #FFFFFF 1.51%, #C0C7DB 51.06%, #FFFFFF 100%);
-    box-shadow: 0px 4px 12px 0px #e3e3e3;
-    filter: drop-shadow(0px 4px 12px #E3E3E3);
 
 
+    .actions {
+        text-align: right;
+
+        button {
+            margin-right: 3px !important;
+        }
+    }
+
+    .content {
+        min-width: 100%;
+        min-height: 500px;
+        height: 500px;
+
+        .empty {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 28px;
+            color: #6B7A99;
+            margin: auto;
+            width: inherit;
+            height: inherit;
+            text-align: center;
+            top: 50%;
+            position: relative;
+        }
+    }
 
 }
