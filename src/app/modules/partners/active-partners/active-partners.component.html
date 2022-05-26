@@ -1,3 +1,42 @@
 <div class="page-container">
-    Active Partners
+    <div class="actions">
+        <button class="btn btn-green">ADD PARTNER</button>
+        <button class="btn btn-grey btn-fill">REMOVE</button>
+        <button class="btn btn-red-gradient">BLOCK</button>
+    </div>
+    <div class="content">
+
+        <div class="tx-table">
+            <div class="tx-header">
+                <ul>
+                    <li>PARTNER NAME</li>
+                    <li>PERSON OF CONTACT</li>
+                    <li>LOCATION</li>
+                    <li>NR OF CONTRACTS</li>
+                </ul>
+            </div>
+            <ng-container *ngFor="let item of data; let i = index">
+                <div class="tx-body" [ngClass]="{'open': collapsible[i]}">
+                    <a (click)="collapsible[i] = !collapsible[i]">
+                        <div>{{ item.partner_name }}</div>
+                        <div>{{ item.person_of_contact }}</div>
+                        <div>{{ item.location }}</div>
+                        <div>{{ item.nr_of_contacts }}</div>
+                    </a>
+                </div>
+                <div class="tx-detail-row" *ngIf="collapsible[i]?collapsible[i] : false" [@slideInOut]>
+                    <a>
+                        <div>Industry: {{ item.industry }}</div>
+                        <div>Location: {{ item.location2 }}</div>
+                        <div>Email: {{ item.email }}</div>
+                        <div>Phone: {{ item.phone }}</div>
+                        <div>Reputation Score: {{ item.reputation_score }}</div>
+                    </a>
+                </div>
+            </ng-container>
+
+        </div>
+
+        <!-- <div class="empty">No active partners yet.</div> -->
+    </div>
 </div>

@@ -1,3 +1,52 @@
 <div class="page-container">
-    pending Invites
+    <div class="page-header">
+        <div class="tabs">
+            <div (click)="selectedTab='customer'" class="tab p-tab"
+                [ngClass]="{ 'active' : selectedTab == 'customer' }">
+                <a>
+                    <div>CUSTOMER</div>
+                </a>
+            </div>
+            <div (click)="selectedTab='supplier'" class="tab o-tab"
+                [ngClass]="{ 'active' : selectedTab == 'supplier' }">
+                <a>
+                    <div>SUPPLIER</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button class="btn btn-green">ADD PARTNER</button>
+            <button class="btn btn-grey btn-fill">REMOVE</button>
+            <button class="btn btn-red-gradient">BLOCK</button>
+        </div>
+    </div>
+    <div class="content">
+
+        <div class="tx-table">
+            <div class="tx-header">
+                <ul>
+                    <li>PARTNER NAME</li>
+                    <li>PERSON OF CONTACT</li>
+                    <li>STATUS</li>
+                    <li>ACTIONS</li>
+                </ul>
+            </div>
+            <ng-container *ngFor="let item of data; let i = index">
+                <div class="tx-body">
+                    <a>
+                        <div>{{ item.partner_name }}</div>
+                        <div>{{ item.person_of_contact }}</div>
+                        <div
+                            [ngClass]="{ 'pending': item.status == 'Pending','boarding': item.status == 'Onboarding','declined': item.status == 'Declined' }">
+                            {{ item.status }}</div>
+                        <div class="action"><button class="btn btn-grey btn-fill">DELETE</button></div>
+                    </a>
+                </div>
+            </ng-container>
+
+        </div>
+
+        <!-- <div class="empty">No active partners yet.</div> -->
+    </div>
 </div>

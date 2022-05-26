@@ -1,3 +1,62 @@
 <div class="page-container">
-    Black List
+
+    <div *ngIf="!IsEmpty" class="page-header">
+
+        <div class="title">Partner List</div>
+        <div class="actions">
+            <button class="btn btn-red-gradient">BLOCK PARTNER</button>
+            <button class="btn btn-grey btn-fill">REMOVE</button>
+        </div>
+    </div>
+
+
+    <div class="content">
+
+        <div *ngIf="!IsEmpty" class="flex">
+
+            <div class="box">
+                <img src="assets/img/Nexity-Network-small.svg" />
+                <div class="title">Nexity Network</div>
+                <div class="subtitle">The Reason</div>
+                <div class="description">
+                    Ignoring lasts more than three months, didn’t <br> pay the second half of the finished project.
+                </div>
+                <div class="score">
+                    Reputation Score: <span>0.23</span>
+                </div>
+            </div>
+
+            <div class="box box-center">
+                <img src="assets/img/Nexity-Network-small.svg" />
+                <div class="title">Nexity Network</div>
+                <div class="subtitle">The Reason</div>
+                <div class="description">
+                    Ignoring lasts more than three months, didn’t <br> pay the second half of the finished project.
+                </div>
+                <div class="score">
+                    Reputation Score: <span>0.23</span>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="assets/img/Nexity-Network-small.svg" />
+                <div class="title">Nexity Network</div>
+                <div class="subtitle">The Reason</div>
+                <div class="description">
+                    Ignoring lasts more than three months, didn’t <br> pay the second half of the finished project.
+                </div>
+                <div class="score">
+                    Reputation Score: <span>0.23</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div *ngIf="IsEmpty" class="empty-container">
+            <img src="assets/img/alert.svg" />
+            <div class="empty">Partner blacklist</div>
+            <div class="subtitle">There will be information about blocked partners.</div>
+        </div>
+
+    </div>
 </div>

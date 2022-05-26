@@ -1,16 +1,181 @@
 .page-container {
     margin: auto;
-    width: 70%;
+    width: 80%;
     padding: 40px 40px 40px 60px;
-    border-radius: 10px;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 45.88%, rgba(245, 246, 248, 0) 98.32%);
-    border-radius: 14px;
-    box-sizing: border-box;
-    border: 1px solid;
-    border-image-source: linear-gradient(90deg, #FFFFFF 1.51%, #C0C7DB 51.06%, #FFFFFF 100%);
-    box-shadow: 0px 4px 12px 0px #e3e3e3;
-    filter: drop-shadow(0px 4px 12px #E3E3E3);
 
 
+    .page-header {
+        display: flex;
+
+        .actions {
+            text-align: right;
+            flex: auto;
+
+            button {
+                margin-right: 3px !important;
+            }
+        }
+
+        .tabs {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            width: 20%;
+
+            a {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 12px;
+                color: #6B7A99;
+                text-decoration: none;
+            }
+
+            .tab {
+                padding: 15px;
+                cursor: pointer;
+                padding-top: 25px;
+            }
+
+            .p-tab {
+                width: 28.5%;
+                min-height: 10px;
+            }
+
+            .o-tab {
+                width: 28.5%;
+                min-height: 40px;
+            }
+
+            .p-tab.active,
+            .p-tab.tab:hover {
+                background: url('/assets/img/left-bg-sm.svg');
+                background-repeat: no-repeat;
+            }
+
+            .o-tab.active,
+            .o-tab.tab:hover {
+                background: url('/assets/img/right-bg-sm.svg');
+                background-repeat: no-repeat;
+            }
+        }
+
+    }
+
+
+
+
+    .content {
+        min-width: 100%;
+        min-height: 500px;
+
+
+        .empty {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 28px;
+            color: #6B7A99;
+            margin: auto;
+            width: inherit;
+            height: 500px;
+            text-align: center;
+            top: 50%;
+            position: relative;
+        }
+
+        .tx-table {
+
+            font-family: 'Roboto';
+            font-style: normal;
+            width: 100%;
+            height: auto;
+            margin-top: 30px;
+
+            .tx-header {
+                background: linear-gradient(90deg, #00B8B8 0%, #078BA5 98.32%);
+                box-shadow: 0px 4px 12px #E2E3E7;
+                border-radius: 10px 10px 0px 0px;
+                height: 46px;
+                padding: 10px;
+                font-weight: 700;
+                font-size: 14px;
+                color: #FFFFFF;
+            }
+
+            .tx-header>ul {
+                list-style: none;
+                display: flex;
+            }
+
+            .tx-header>ul li:nth-child(1),
+            .tx-body a div:nth-child(1) {
+                width: 26.66%;
+            }
+
+            .tx-header>ul li:nth-child(2),
+            .tx-body a div:nth-child(2) {
+                width: 26.66%;
+            }
+
+            .tx-header>ul li:nth-child(3),
+            .tx-body a div:nth-child(3) {
+                width: 26.66%;
+            }
+
+            .tx-header>ul li:nth-child(4),
+            .tx-body a div:nth-child(4) {
+                width: 26.66%;
+            }
+
+            .tx-body a div:nth-child(n) {
+                padding-top: 20px;
+                font-weight: 600;
+                font-size: 12px;
+                color: #6B7A99;
+            }
+
+            .tx-body a div.action {
+                padding-top: 0px;
+            }
+
+            .tx-body a div:nth-child(1) {
+                color: #000000;
+            }
+
+
+            .tx-body a {
+                display: flex;
+                height: inherit;
+                cursor: pointer;
+            }
+
+            .tx-body {
+                height: 60px;
+                padding-left: 46px;
+                background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 12.09%, #FFFFFF 85.31%, rgba(245, 246, 248, 0) 98.32%);
+                filter: drop-shadow(0px 4px 12px #E2E3E7);
+                border-radius: 14px;
+                margin-top: 7px;
+            }
+
+            .tx-body:hover {
+                border: 1px solid #1ee3e6;
+            }
+
+            .pending {
+                color: #077DE9 !important;
+            }
+
+            .boarding {
+                color: #12B4D4 !important;
+            }
+
+            .declined {
+                color: #CB0B0B !important;
+            }
+
+        }
+    }
 
 }
