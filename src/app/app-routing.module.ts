@@ -35,6 +35,12 @@ const routes: Routes = [
         data: { parentKey: 'Settings' }
       },
       {
+        path: 'user-settings',
+        loadChildren: () => import('./modules/user-settings/user-settings.module').then(m => m.UserSettingsModule),
+        canActivate: [AuthGuard],
+        data: { parentKey: 'User Settings' }
+      },
+      {
         path: 'screens',
         loadChildren: () => import('./modules/screens/screens.module').then(m => m.ScreensModule),
         data: { parentKey: 'Screens' }
