@@ -1,0 +1,21 @@
+<div class="tabs">
+    <div class="tab p-tab" [ngClass]="{'active': this.router.url == '/partners/active-partners'}">
+        <a [routerLink]="['/partners','active-partners']">
+            <img src="assets/img/active-partners.svg" />
+            <div>Active Partners</div>
+        </a>
+    </div>
+    <div class="tab m-tab" [ngClass]="{'active': router.url == '/partners/pending-invites'}">
+        <a [routerLink]="['/partners' ,'pending-invites']">
+            <img src="assets/img/pending-invites.svg" />
+            <div>Pending Invites</div>
+        </a>
+    </div>
+    <div class="tab o-tab" [ngClass]="{'active': router.url == '/partners/blacklist'}">
+        <a [routerLink]="['/partners' ,'blacklist']">
+            <img src="assets/img/blacklist.svg" />
+            <div>Blacklist</div>
+        </a>
+    </div>
+</div>
+<router-outlet></router-outlet>

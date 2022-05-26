@@ -46,6 +46,11 @@ const routes: Routes = [
         data: { parentKey: 'Screens' }
       },
       {
+        path: 'partners',
+        loadChildren: () => import('./modules/partners/partners.module').then(m => m.PartnersModule),
+        data: { parentKey: 'Partners' }
+      },
+      {
         path: '**', component: PageNotFoundComponent
       },
       { path: 'notfound', component: PageNotFoundComponent },
