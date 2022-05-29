@@ -51,6 +51,11 @@ const routes: Routes = [
         data: { parentKey: 'Partners' }
       },
       {
+        path: 'products-and-services',
+        loadChildren: () => import('./modules/product-and-services/product-and-services.module').then(m => m.ProductAndServicesModule),
+        data: { parentKey: 'Partners' }
+      },
+      {
         path: '**', component: PageNotFoundComponent
       },
       { path: 'notfound', component: PageNotFoundComponent },

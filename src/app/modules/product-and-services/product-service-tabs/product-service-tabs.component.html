@@ -1,0 +1,15 @@
+<div class="tabs">
+    <div class="tab p-tab" [ngClass]="{'active': this.router.url == '/products-and-services/products'}">
+        <a [routerLink]="['/products-and-services','products']">
+            <img src="assets/img/product.svg" />
+            <div>Products</div>
+        </a>
+    </div>
+    <div class="tab o-tab" [ngClass]="{'active': router.url == '/products-and-services/services'}">
+        <a [routerLink]="['/products-and-services' ,'services']">
+            <img src="assets/img/org-icon.svg" />
+            <div>Services</div>
+        </a>
+    </div>
+</div>
+<router-outlet></router-outlet>

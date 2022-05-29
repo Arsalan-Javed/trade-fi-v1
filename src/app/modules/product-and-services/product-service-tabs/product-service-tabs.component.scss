@@ -1,0 +1,45 @@
+.tabs {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    a {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        color: #6B7A99;
+        text-decoration: none;
+    }
+
+    .tab {
+        padding: 15px;
+        cursor: pointer;
+    }
+
+    .p-tab {
+        width: 6.6%;
+        min-height: 72px;
+        padding-right: 0px;
+    }
+
+    .o-tab {
+        width: 7.2%;
+        min-height: 72px;
+        padding-left: 4px;
+    }
+
+    .p-tab.active,
+    .p-tab.tab:hover {
+        background: url('/assets/img/left-bg-md.svg');
+        background-repeat: no-repeat;
+    }
+
+    .o-tab.active,
+    .o-tab.tab:hover {
+        background: url('/assets/img/right-bg-md.svg');
+        background-repeat: no-repeat;
+    }
+}
