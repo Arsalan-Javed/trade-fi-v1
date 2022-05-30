@@ -1,7 +1,15 @@
 <svg width="87" height="87" viewBox="0 0 87 87" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="43.5" cy="43.5" r="43.5" fill="url(#paint0_linear_0_668)"/>
+<circle cx="43.5" cy="43.5" r="43.5" fill="url(#paint0_linear_0_1)"/>
+<path d="M54.6667 35.1111V31.5556C54.6667 29.5911 53.0756 28 51.1111 28H31.5556C29.5911 28 28 29.5911 28 31.5556V40.4444C28 42.4089 29.5911 44 31.5556 44H35.1111" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M57.234 60H37.8776C36.3487 60 35.1113 58.7627 35.1113 57.2338V37.8773C35.1113 36.3484 36.3487 35.1111 37.8776 35.1111H57.2358C58.7629 35.1111 60.0002 36.3484 60.0002 37.8773V57.2356C60.0002 58.7627 58.7629 60 57.234 60Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M54.4687 42.0278H46.1665" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M46.1665 47.5556H54.4687" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M46.1665 53.0833H54.4687" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M40.6371 47.2107C40.4469 47.2107 40.2922 47.3653 40.294 47.5556C40.294 47.7458 40.4487 47.9004 40.6389 47.9004C40.8291 47.9004 40.9838 47.7458 40.9838 47.5556C40.9838 47.3653 40.8291 47.2107 40.6371 47.2107" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M40.6371 52.7384C40.4469 52.7384 40.2922 52.8931 40.294 53.0833C40.294 53.2736 40.4487 53.4282 40.6389 53.4282C40.8291 53.4282 40.9838 53.2736 40.9838 53.0833C40.9838 52.8931 40.8291 52.7384 40.6371 52.7384" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M40.6371 41.6736C40.4469 41.6736 40.2922 41.8283 40.294 42.0185C40.294 42.2087 40.4487 42.3634 40.6389 42.3634C40.8291 42.3634 40.9838 42.2087 40.9838 42.0185C40.9856 41.8301 40.8291 41.6736 40.6371 41.6736" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <defs>
-<linearGradient id="paint0_linear_0_668" x1="43.5" y1="0" x2="43.5" y2="87" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_0_1" x1="43.5" y1="0" x2="43.5" y2="87" gradientUnits="userSpaceOnUse">
 <stop stop-color="#13B7D5"/>
 <stop offset="1" stop-color="#077DE9"/>
 </linearGradient>

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddPartnerComponent } from './add-partner/add-partner.component';
 import { CertificationsComponent } from './certifications/certifications.component';
+import { DocumentsComponent } from './documents/documents.component';
 import { InviteSuccessComponent } from './invite-success/invite-success.component';
 import { KeepBusinessComponent } from './keep-business/keep-business.component';
 import { PartnerPopupComponent } from './partner-popup/partner-popup.component';
@@ -25,6 +26,7 @@ const routes: Routes = [
     { path: 'invite-success', component: InviteSuccessComponent },
     { path: 'partner-popup', component: PartnerPopupComponent },
     { path: 'referral', component: ReferralComponent },
+    { path: 'documents', component: DocumentsComponent },
 
 ];
 
