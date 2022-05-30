@@ -18,6 +18,7 @@ import { InviteSuccessComponent } from './invite-success/invite-success.componen
 import { PartnerPopupComponent } from './partner-popup/partner-popup.component';
 import { ReferralComponent } from './referral/referral.component';
 import { DocumentsComponent } from './documents/documents.component';
+import { DocumentDetailComponent } from './document-detail/document-detail.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { DocumentsComponent } from './documents/documents.component';
         InviteSuccessComponent,
         PartnerPopupComponent,
         ReferralComponent,
-        DocumentsComponent
+        DocumentsComponent,
+        DocumentDetailComponent
     ],
     imports: [
         CommonModule,

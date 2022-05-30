@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddPartnerComponent } from './add-partner/add-partner.component';
 import { CertificationsComponent } from './certifications/certifications.component';
+import { DocumentDetailComponent } from './document-detail/document-detail.component';
 import { DocumentsComponent } from './documents/documents.component';
 import { InviteSuccessComponent } from './invite-success/invite-success.component';
 import { KeepBusinessComponent } from './keep-business/keep-business.component';
@@ -27,6 +28,7 @@ const routes: Routes = [
     { path: 'partner-popup', component: PartnerPopupComponent },
     { path: 'referral', component: ReferralComponent },
     { path: 'documents', component: DocumentsComponent },
+    { path: 'document-detail', component: DocumentDetailComponent },
 
 ];
 
