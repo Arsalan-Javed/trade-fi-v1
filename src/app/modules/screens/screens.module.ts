@@ -19,6 +19,7 @@ import { PartnerPopupComponent } from './partner-popup/partner-popup.component';
 import { ReferralComponent } from './referral/referral.component';
 import { DocumentsComponent } from './documents/documents.component';
 import { DocumentDetailComponent } from './document-detail/document-detail.component';
+import { AgreementComponent } from './agreement/agreement.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { DocumentDetailComponent } from './document-detail/document-detail.compo
         PartnerPopupComponent,
         ReferralComponent,
         DocumentsComponent,
-        DocumentDetailComponent
+        DocumentDetailComponent,
+        AgreementComponent
     ],
     imports: [
         CommonModule,

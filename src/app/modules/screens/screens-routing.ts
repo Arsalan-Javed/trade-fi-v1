@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddPartnerComponent } from './add-partner/add-partner.component';
+import { AgreementComponent } from './agreement/agreement.component';
 import { CertificationsComponent } from './certifications/certifications.component';
 import { DocumentDetailComponent } from './document-detail/document-detail.component';
 import { DocumentsComponent } from './documents/documents.component';
@@ -29,6 +30,7 @@ const routes: Routes = [
     { path: 'referral', component: ReferralComponent },
     { path: 'documents', component: DocumentsComponent },
     { path: 'document-detail', component: DocumentDetailComponent },
+    { path: 'agreement', component: AgreementComponent },
 
 ];
 
