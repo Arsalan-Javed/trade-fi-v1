@@ -1,0 +1,134 @@
+.page-container {
+    margin: auto;
+    width: 80%;
+    padding: 40px 40px 40px 60px;
+    font-family: 'Roboto';
+    font-style: normal;
+
+
+    .page-header {
+        display: flex;
+
+        .actions {
+            text-align: right;
+            flex: auto;
+
+            button {
+                margin-right: 3px !important;
+            }
+        }
+
+        .tabs {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            width: 20%;
+
+            a {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 12px;
+                color: #6B7A99;
+                text-decoration: none;
+            }
+
+            .tab {
+                padding: 15px;
+                cursor: pointer;
+                padding-top: 25px;
+            }
+
+            .p-tab {
+                width: 28.5%;
+                min-height: 10px;
+            }
+
+            .o-tab {
+                width: 28.5%;
+                min-height: 40px;
+            }
+
+            .p-tab.active,
+            .p-tab.tab:hover {
+                background: url('/assets/img/left-bg-sm.svg');
+                background-repeat: no-repeat;
+            }
+
+            .o-tab.active,
+            .o-tab.tab:hover {
+                background: url('/assets/img/right-bg-sm.svg');
+                background-repeat: no-repeat;
+            }
+        }
+
+    }
+
+
+    .center {
+        text-align: center;
+    }
+
+    .content {
+        min-width: 100%;
+        min-height: 500px;
+        padding-top: 30px;
+
+        .card-row {
+
+            padding: 10px;
+            display: flex;
+
+            .card {
+                background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 45.88%, rgba(245, 246, 248, 0) 98.32%);
+                filter: drop-shadow(0px 4px 12px #E3E3E3);
+                border-radius: 14px;
+                padding: 25px;
+                width: 25%;
+                margin-left: 10px;
+                margin-left: 10px;
+            }
+
+            .title {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 23px;
+                text-align: center;
+                color: #13B7D5;
+                padding: 5px;
+            }
+
+            .tag {
+                box-sizing: border-box;
+                background: linear-gradient(90deg, #19DEC4 0%, #01BD9C 98.32%);
+                box-shadow: 0px 4px 12px #E2E3E7;
+                border-radius: 10px;
+                margin-left: 28%;
+                margin-right: 28%;
+                font-weight: 600;
+                font-size: 12px;
+                padding: 2px;
+                color: #FFFFFF;
+                cursor: pointer;
+            }
+
+        }
+
+
+        .empty {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 28px;
+            color: #6B7A99;
+            margin: auto;
+            width: inherit;
+            height: 500px;
+            text-align: center;
+            top: 50%;
+            position: relative;
+        }
+
+    }
+
+}

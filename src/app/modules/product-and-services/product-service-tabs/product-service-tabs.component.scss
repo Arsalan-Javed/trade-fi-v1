@@ -43,3 +43,23 @@
         background-repeat: no-repeat;
     }
 }
+
+.top-action-container {
+    width: 80%;
+    margin: auto;
+    padding-top: 20px;
+
+    a {
+        cursor: pointer;
+
+        .back {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 100%;
+            color: #6B7A99;
+        }
+    }
+
+}

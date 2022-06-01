@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-products',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router) { }
 
   data = [{
     partner_name: 'Schaeffler',
@@ -22,8 +23,12 @@ export class ProductsComponent implements OnInit {
     person_of_contact: 'Georg Schaeffler',
     status: 'Declined',
   }];
-  
+
   ngOnInit(): void {
+  }
+
+  AddSetUp() {
+    this.router.navigate(['/products-and-services/product-setup']);
   }
 
 }

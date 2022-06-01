@@ -13,4 +13,13 @@ export class ProductServiceTabsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  goBackToList() {
+    if (this.router.url.indexOf('/products-and-services/product-setup') >= 0) {
+      this.router.navigate(['/products-and-services/products']);
+    }
+    else if (this.router.url.indexOf('/products-and-services/service-setup') >= 0) {
+      this.router.navigate(['/products-and-services/services']);
+    }
+  }
+
 }

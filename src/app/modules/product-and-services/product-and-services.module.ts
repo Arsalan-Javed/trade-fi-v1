@@ -8,13 +8,17 @@ import { ProductAndServicesRoutingModule } from "./product-and-services-routing.
 import { ProductServiceTabsComponent } from './product-service-tabs/product-service-tabs.component';
 import { ProductsComponent } from './products/products.component';
 import { ServicesComponent } from './services/services.component';
+import { ProductSetupComponent } from './product-setup/product-setup.component';
+import { ServiceSetupComponent } from './service-setup/service-setup.component';
 
 @NgModule({
     declarations: [
     
     ProductServiceTabsComponent,
          ProductsComponent,
-         ServicesComponent
+         ServicesComponent,
+         ProductSetupComponent,
+         ServiceSetupComponent
   ],
     imports: [
         CommonModule,
