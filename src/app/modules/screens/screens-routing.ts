@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddPartnerComponent } from './add-partner/add-partner.component';
 import { AgreementComponent } from './agreement/agreement.component';
 import { CertificationsComponent } from './certifications/certifications.component';
+import { ConditionsComponent } from './conditions/conditions.component';
 import { DocumentDetailComponent } from './document-detail/document-detail.component';
 import { DocumentsComponent } from './documents/documents.component';
 import { InviteSuccessComponent } from './invite-success/invite-success.component';
@@ -31,6 +32,7 @@ const routes: Routes = [
     { path: 'documents', component: DocumentsComponent },
     { path: 'document-detail', component: DocumentDetailComponent },
     { path: 'agreement', component: AgreementComponent },
+    { path: 'conditions', component: ConditionsComponent },
 
 ];
 

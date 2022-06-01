@@ -1,6 +1,6 @@
 .page-container {
     margin: auto;
-    width: 22%;
+    width: 30%;
     padding: 7px;
     border-radius: 10px;
     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 45.88%, rgba(245, 246, 248, 0) 98.32%);
@@ -127,8 +127,29 @@
         letter-spacing: 1px;
     }
 
+    .box {
+        border: 1px solid rgb(211 218 233);
+        border-radius: 14px;
+        padding: 15px;
+
+        .title {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            color: #E85555;
+        }
+
+        .detail {
+            font-weight: 500;
+            font-size: 11px;
+            line-height: 16px;
+            color: #6B7A99;
+        }
+    }
+
 
 }
+
 
 .page-header {
     padding: 40px;

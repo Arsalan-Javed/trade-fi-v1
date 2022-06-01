@@ -20,6 +20,7 @@ import { ReferralComponent } from './referral/referral.component';
 import { DocumentsComponent } from './documents/documents.component';
 import { DocumentDetailComponent } from './document-detail/document-detail.component';
 import { AgreementComponent } from './agreement/agreement.component';
+import { ConditionsComponent } from './conditions/conditions.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { AgreementComponent } from './agreement/agreement.component';
         ReferralComponent,
         DocumentsComponent,
         DocumentDetailComponent,
-        AgreementComponent
+        AgreementComponent,
+        ConditionsComponent
     ],
     imports: [
         CommonModule,
