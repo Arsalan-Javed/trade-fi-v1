@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-conditions',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConditionsComponent implements OnInit {
 
-  constructor() { }
+  from = 'products';
+  constructor(private router: Router, private activeRoute: ActivatedRoute,) { }
 
   ngOnInit(): void {
+
+    this.activeRoute.queryParamMap.subscribe((params) => {
+      this.from = params.get('from');
+    });
+
+  }
+
+  close() {
+
+    if (this.from) {
+      this.router.navigate(['/products-and-services/' + this.from]);
+    }
   }
 
 }

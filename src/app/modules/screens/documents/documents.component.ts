@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-documents',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DocumentsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router,) { }
 
   ngOnInit(): void {
+  }
+
+  viewDetails() {
+    this.router.navigate(['/screens/agreement']);
+  }
+
+  addSetup() {
+    this.router.navigate(['/screens/document-detail']);
   }
 
 }

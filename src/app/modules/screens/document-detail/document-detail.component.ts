@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-document-detail',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DocumentDetailComponent implements OnInit {
 
-  constructor() { }
+  constructor( private router: Router,) { }
 
   ngOnInit(): void {
   }
+
+  close(){
+    this.router.navigate(['/screens/documents']);
+  }
+
 
 }

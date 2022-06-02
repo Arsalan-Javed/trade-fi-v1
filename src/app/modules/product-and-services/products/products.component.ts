@@ -31,4 +31,8 @@ export class ProductsComponent implements OnInit {
     this.router.navigate(['/products-and-services/product-setup']);
   }
 
+  viewPermissions() {
+    this.router.navigate(['/screens/conditions'], { queryParams: { from: 'products' } });
+  }
+
 }

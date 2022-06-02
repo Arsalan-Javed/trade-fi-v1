@@ -17,4 +17,8 @@ export class ServicesComponent implements OnInit {
     this.router.navigate(['/products-and-services/service-setup']);
   }
 
+  viewPermissions() {
+    this.router.navigate(['/screens/conditions'], { queryParams: { from: 'services' } });
+  }
+
 }

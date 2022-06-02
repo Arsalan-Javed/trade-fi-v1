@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-service-setup',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServiceSetupComponent implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  save() {
+    this.router.navigate(['/products-and-services/services']);
   }
 
 }
